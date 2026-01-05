@@ -25,6 +25,13 @@
 
 ## 如何开始游戏
 
+### 方式一：直接运行 (Windows .exe)
+无需安装 Python 环境，下载即玩。
+**[下载](https://github.com/Trainingdlu/Alien_Invasion/releases/latest)**
+
+### 方式二：源码运行
+如果你想查看源码或进行二次开发：
+
 1. **克隆仓库**
    ```bash
    git clone https://github.com/Trainingdlu/Alien_Invasion.git
