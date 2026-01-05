@@ -2,7 +2,7 @@ import json
 import sys
 from pathlib import Path
 from time import sleep
-
+import os
 import pygame
 
 from alien_1 import Alien_1
@@ -19,7 +19,9 @@ from scoreboard import Scoreboard
 from settings import Settings
 from ship import Ship
 from text import CenterTopText
-
+import sys
+import os
+from resource import resource_path
 
 class AlienInvasion:
 
@@ -27,10 +29,10 @@ class AlienInvasion:
 
         pygame.init()
         pygame.mixer.init()
-        pygame.mixer.music.load('sounds/bgmusic.ogg')
+        pygame.mixer.music.load(resource_path('sounds/bgmusic.ogg'))
         pygame.mixer.music.play(-1)
-        self.sound_effect1 = pygame.mixer.Sound('sounds/fisound.wav')
-        self.sound_effect2 = pygame.mixer.Sound('sounds/exsound.wav')
+        self.sound_effect1 = pygame.mixer.Sound(resource_path('sounds/fisound.wav'))
+        self.sound_effect2 = pygame.mixer.Sound(resource_path('sounds/exsound.wav'))
         self.clock = pygame.time.Clock()
         self.settings = Settings()
         self.screen = pygame.display.set_mode((self.settings.screen_width, self.settings.screen_height))
@@ -116,7 +118,7 @@ class AlienInvasion:
                 self.sound_effect1.play()
                 self.sound_effect1.set_volume(0.2)
             self._fire_bullet()
-        elif event.key == pygame.K_q:
+        elif event.key == pygame.K_q or event.key == pygame.K_ESCAPE:
             sys.exit()
 
     def _check_keyup_events(self, event):

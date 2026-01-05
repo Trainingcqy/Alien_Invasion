@@ -1,5 +1,6 @@
 import pygame
 from pygame.sprite import Sprite
+from resource import resource_path
 
 
 class Ship(Sprite):
@@ -18,7 +19,7 @@ class Ship(Sprite):
             count = 3
         else:
             count = 1
-        self.image = pygame.image.load(f'images/ship_{count}.png').convert_alpha()
+        self.image = pygame.image.load(resource_path(f'images/ship_{count}.png')).convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.midbottom = self.screen_rect.midbottom
         self.x = float(self.rect.x)

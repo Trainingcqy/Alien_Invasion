@@ -4,6 +4,8 @@ import random
 
 import pygame
 from pygame.sprite import Sprite
+from resource import resource_path
+
 
 
 class Alien_2(Sprite):
@@ -11,7 +13,7 @@ class Alien_2(Sprite):
         super().__init__()
         self.screen = ai_game.screen
         self.settings = ai_game.settings
-        self.image = pygame.image.load('images/alien_a2.png').convert_alpha()
+        self.image = pygame.image.load(resource_path('images/alien_a2.png')).convert_alpha()
         self.rect = self.image.get_rect()
         self.speed = ai_game.settings.alien_speed
         self.angle = random.uniform(0, 2 * math.pi)

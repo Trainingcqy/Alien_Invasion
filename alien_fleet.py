@@ -1,7 +1,7 @@
-
 import pygame
 from pygame.sprite import Sprite
 
+from resource import resource_path
 
 class Alien_Fleet(Sprite):
     def __init__(self, ai_game):
@@ -11,9 +11,9 @@ class Alien_Fleet(Sprite):
         self.stats = ai_game.stats
         level = int(self.stats.level)
         if level in {2, 4, 6, 8}:
-            self.image = pygame.image.load(f'images/alien_fleet{level}.png').convert_alpha()
+            self.image = pygame.image.load(resource_path(f'images/alien_fleet{level}.png')).convert_alpha()
         else:
-            self.image = pygame.image.load('images/alien_.png').convert_alpha()
+            self.image = pygame.image.load(resource_path('images/alien_.png')).convert_alpha()
         self.rect = self.image.get_rect()
         self.rect.x = self.rect.width
         self.rect.y = self.rect.height

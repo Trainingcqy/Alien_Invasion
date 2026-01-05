@@ -1,10 +1,10 @@
-
 import math
 import random
 
 import pygame
 from pygame.sprite import Sprite
 
+from resource import resource_path
 
 class Alien_boss(Sprite):
     def __init__(self, ai_game):
@@ -13,8 +13,8 @@ class Alien_boss(Sprite):
         self.screen_rect = ai_game.screen.get_rect()
         self.settings = ai_game.settings
         self.images = {
-            'phase1': pygame.image.load('images/alien_boss_1.png').convert_alpha(),
-            'phase2': pygame.image.load('images/alien_boss_2.png').convert_alpha()
+            'phase1': pygame.image.load(resource_path('images/alien_boss_1.png')).convert_alpha(),
+            'phase2': pygame.image.load(resource_path('images/alien_boss_2.png')).convert_alpha()
         }
         self.current_image = self.images['phase1']
         self.image = self.current_image

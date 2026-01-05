@@ -1,16 +1,17 @@
 import pygame
 
+from resource import resource_path
 
 class Settings:
 
     def __init__(self):
-        self.st_background_image = pygame.image.load("images/st_background.png")
-        self.level_1_bg_image = pygame.image.load("images/level_1_bg.png")
-        self.level_2_bg_image = pygame.image.load("images/level_2_bg.png")
-        self.level_3_bg_image = pygame.image.load("images/level_3_bg.png")
-        self.level_4_bg_image = pygame.image.load("images/level_4_bg.png")
-        self.fi_background_image = pygame.image.load("images/fi_background.png")
-        self.egg_background_image = pygame.image.load("images/egg_background.png")
+        self.st_background_image = pygame.image.load(resource_path("images/st_background.png"))
+        self.level_1_bg_image = pygame.image.load(resource_path("images/level_1_bg.png"))
+        self.level_2_bg_image = pygame.image.load(resource_path("images/level_2_bg.png"))
+        self.level_3_bg_image = pygame.image.load(resource_path("images/level_3_bg.png"))
+        self.level_4_bg_image = pygame.image.load(resource_path("images/level_4_bg.png"))
+        self.fi_background_image = pygame.image.load(resource_path("images/fi_background.png"))
+        self.egg_background_image = pygame.image.load(resource_path("images/egg_background.png"))
         self.screen_width = pygame.display.Info().current_w
         self.screen_height = pygame.display.Info().current_h
         self.ship_limit = 3
