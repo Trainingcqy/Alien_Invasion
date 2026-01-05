@@ -5,8 +5,8 @@
 
 ## 游戏演示
 
-![Game](images/eg1.png)
-![Game](images/eg2.png)
+![Game](egimages/eg_1.png)
+![Game](egimages/eg_2.png)
 
 
 ## 主要功能
