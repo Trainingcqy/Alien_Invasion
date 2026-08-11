@@ -27,14 +27,14 @@
 
 ### 方式一：直接运行 (Windows .exe)
 无需安装 Python 环境，下载即玩。
-**[下载](https://github.com/Trainingdlu/Alien_Invasion/releases/latest)**
+**[下载](https://github.com/Trainingcqy/Alien_Invasion/releases/latest)**
 
 ### 方式二：源码运行
 如果你想查看源码或进行二次开发：
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/Trainingdlu/Alien_Invasion.git
+   git clone https://github.com/Trainingcqy/Alien_Invasion.git
    ```
 
 2. **安装依赖**
@@ -50,7 +50,7 @@
 ## 文件结构
 - `alien_invasion.py`: 游戏主入口
 - `settings.py`: 所有游戏参数设置
-- `ship.py` / `alien.py`: 飞船与外星人类定义
+- `ship.py` / `alien_*.py`: 飞船与外星人类定义
 - `images/sounds`: 存放素材
 
 ## 致谢
